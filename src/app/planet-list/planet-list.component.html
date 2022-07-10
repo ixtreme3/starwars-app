@@ -1,0 +1,13 @@
+<div class="planet-list">
+  <div *ngFor="let planet of planets" class="planet-card">
+    <h2 class="planet-card-header">{{planet.name}} 🪐</h2>
+    <div class="planet-card-description">
+      <b>Population</b> 👥: {{planet.population}} <br>
+      <b>Terrain</b> ⛰️: {{planet.terrain}} <br>
+      <b>Climate</b> 🌱: {{planet.climate}} <br>
+      <b>Gravity</b> 🚀: {{planet.gravity}} <br>
+      <b>Residents</b> 🏠: {{planet.residents.length}} <br>
+    </div>
+    <button class="planet-card-button" [routerLink]="['planet', getId(planet.url)]">Full description 📃</button>
+  </div>
+</div>

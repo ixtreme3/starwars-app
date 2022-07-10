@@ -1,0 +1,33 @@
+.expand-planet-card{
+  padding: 15px;
+  margin-bottom: 15px;
+  color: white;
+  border: 1px solid whitesmoke;
+  border-radius: 12px;
+}
+
+.expand-planet-card-header {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.expand-planet-card-description b {
+  margin-bottom: 15px;
+}
+
+.expand-planet-card-button {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(65,246,60,255);
+  margin-top: 10px;
+  padding: 0;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+}
+
+.resident-description {
+  margin-top: 15px;
+}

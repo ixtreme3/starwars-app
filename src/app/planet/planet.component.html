@@ -1,0 +1,33 @@
+<style>
+
+</style>
+
+<div class="expand-planet-card">
+    <h2 class="expand-planet-card-header">{{planet.name}} 🪐</h2>
+    <div class="expand-planet-card-description">
+      <b>Rotation period</b>: {{planet.rotation_period}}<br>
+      <b>Orbital period</b>: {{planet.orbital_period}} <br>
+      <b>Diameter</b>: {{planet.diameter}} <br>
+      <b>Climate</b>: {{planet.climate}}<br>
+      <b>Gravity</b>: {{planet.gravity}}<br>
+      <b>Terrain</b>: {{planet.terrain}} <br>
+      <b>Surface water</b>: {{planet.surface_water}} <br>
+      <b>Population</b>: {{planet.population}} <br> 
+      <b>Residents</b>: {{planet.residents.length}} <br> <br>
+
+      <div class="residents-list">
+        <h2 class="expand-planet-card-header">Residents 👥</h2>
+        <div *ngFor="let resident of residentsList" class="resident-description">
+          <h3 class="expand-planet-card-header">{{resident.name}} 😎</h3>
+          <b>Height</b>: {{resident.height}}<br>
+          <b>Mass</b>: {{resident.mass}}<br>
+          <b>Hair color</b>: {{resident.hair_color}}<br>
+          <b>Skin color</b>: {{resident.skin_color}}<br>
+          <b>Eye color</b>: {{resident.eye_color}}<br>
+          <b>Birth year</b>: {{resident.birth_year}}<br>
+          <b>Gender</b>: {{resident.gender}}<br>
+        </div>
+      </div>
+    </div>
+
+</div>
