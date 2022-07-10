@@ -21,6 +21,13 @@ export class PlanetComponent implements OnInit {
       this.subscription = activateRoute.params.subscribe(params => this.id = params['id']);
   }
 
+  ngOnInit(): void {
+    this.http.get(api + this.id).subscribe((data:any) => {
+      this.planet = data;
+      this.fetchData(data.residents)
+    })
+  }
+
   fetchData(residentsUrl: string[]): void {
     for (let url of residentsUrl) {
       this.http.get(url).subscribe((data:any) => {
@@ -29,10 +36,14 @@ export class PlanetComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.http.get(api + this.id).subscribe((data:any) => {
-      this.planet = data;
-      this.fetchData(data.residents)
-    })
+  filter(template: string): void {
+    let residents = document.querySelectorAll('.resident-description');
+    residents.forEach((node: any) => node.hidden = false);
+    if (template == 'reset') return;
+    residents.forEach((node: any) => {
+      if (!node.textContent.includes(template)) {
+        node.hidden = true;
+      }
+    });
   }
 }

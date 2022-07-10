@@ -31,3 +31,18 @@
 .resident-description {
   margin-top: 15px;
 }
+
+.button-block {
+  margin: auto;
+  width: 66%;
+}
+
+.filter-button {
+  background-color: rgba(65,246,60,255);
+  border: none;
+  border-radius: 8px;
+}
+
+.filter-button:not(:last-child)  {
+  margin-right: 5px;
+}
