@@ -9,9 +9,13 @@
   }
 
   .page-header {
-    color: white;
     text-align: center;
     margin-bottom: 40px;
+  }
+
+  .logo-link {
+    color: white;
+    text-decoration: none;
   }
 
   .planet-card {
@@ -49,7 +53,7 @@
 <div class="flex-container">
   <div class="main-component">
     
-    <h1 class="page-header">Star Wars App 🌌 🔫</h1>
+    <h1 class="page-header"><a class="logo-link" href="">Star Wars App 🌌 🔫</a></h1>
 
     <div class="planet-list">
       <div *ngFor="let planet of planets" class="planet-card">
@@ -61,7 +65,7 @@
           <b>Gravity 🚀: {{planet.gravity}}</b> <br>
           <b>Residents 🏠: {{planet.residents.length}}</b> <br>
         </div>
-        <button class="planet-card-button">Full description 📃</button>
+        <button class="planet-card-button" (click)="handleClick($event)">Full description 📃</button>
       </div>
     </div>
   </div>
