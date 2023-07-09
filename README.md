@@ -1,7 +1,7 @@
 # Description
 This repository contains the code for a single-page web application (SPA) developed as part of a coding test for a web development position. The application allows users to view information about characters from the "Star Wars" universe, using the public API provided by swapi.dev.
 
-![Star Wars Characters SPA](./assets/image.gif)
+![Star Wars Characters SPA](src/assets/image.gif)
 
 
 # Features
